@@ -1,0 +1,16 @@
+<h2><%= @user.name %></h2>
+<p>Bio: <%= @user.bio %></p>
+<p>Email: <%= @user.email %></p>
+<p>Location: <%= @user.location %></p>
+
+<% @user.readings.each do |reading| %>
+    <h4><a href="/readings/<%= reading.name %>"><strong>Location: </strong><%= @reading.location %><strong>Genre: </strong><%= @reading.genre %></h4><br>
+    <img src="<%= reading.image_url %>" height="150"><br>
+<% end %>
+
+<% if logged_in? && (@user.id == current_user.id) %>
+    <div class="buttons">
+        <button onclick="document.location='/readings/new'">Create Reading</button>
+        <button onclick="document.location='/logout/">Log Out</button>
+    </div>
+<% end %>
