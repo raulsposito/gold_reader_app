@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head> 
+<title>GoldReaderApp</title>
+
+<link rel="stylesheet" href="/stylesheet/style.css" />
+</head>
+
+<body>
+<div class="wrapper">
+
+<h1>Gold Reader App</h1> 
+<h2>A Sinatra App to arrange read aloud activities for the elderly.</h2>
+
+<% if flash[:message] %> 
+<h4 style="color:red;"><%= flash[:errors] %></h4>
+<% end %><br>
+
+<%= yield %>
+
+</body>
+</html>
