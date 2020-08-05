@@ -1,0 +1,18 @@
+<h2><%= @reading.user.name %></h2> 
+<strong>Title: </strong><%= @reading.name %><br>
+<img src="<%= @reading.image_url" %>" height="150"><br>
+<%= @reading.location %><br><br>
+<%= @reading.genre %><br><br>
+
+<% if logged_in? %>
+    <div class="buttons">
+        <% if authorized_user?(@reading) %>
+        <button onclick="document.location='/'">Go to Profile</button>
+        <button onclick="document.location='/readings/<%= @reading.id %>/edit/'">Edit Reading</button>
+        <form action="/readings/<%= @reading.id %>/delete" method="post">
+            <input id="hidden" type="hidden" name="_method" value="delete">
+            <button>Delete Reading</button>
+            <% end %>
+        </form>
+    </div>
+<% end %>

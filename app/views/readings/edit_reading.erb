@@ -1,0 +1,19 @@
+<h3>Edit a Reading</h3>
+
+<form action="/readings/<%= @reading.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <label for="name">Title: </label>
+    <input type="text" name="name" id="name" value=<%= @reading.name %>"<br><br>
+
+    <label for="image_url">Image URL:</label>
+    <input type="text" name="image_url" id="image_url" value="<%= @reading.image_url %>" size="100"><br><br>
+
+    <label for="location">Location:</label>
+    <input type="text" name="location" id="location" value="<%= @reading.location %>" size="20"><br><br>
+
+    <label for="genre">Genre: </label>
+    <input type="text" name="genre" id="genre" value="<%= @reading.genre %>" size="20"><br><br>
+
+    <input type="submit" name="" value=" Edit Reading ">
+</form>
