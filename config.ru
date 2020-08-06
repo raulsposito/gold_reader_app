@@ -8,7 +8,7 @@ end
 use Rack::MethodOverride
 
 # all the controllers I want to use
-use UsersController
+use UserController
 use ReadingController
 
 run ApplicationController
