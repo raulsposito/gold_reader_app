@@ -11,12 +11,12 @@
     }
 
     body {
-        background-color: gold;
+        background-color: #A6882E;
         font-family: Helvetica;
         line-height: 18px;
     }
     .wrapper {
-        background: #fff;
+        background: #F2E1AC;
         -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
         -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
         box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -57,8 +57,8 @@
       }
     
       .sidebar {
-        background: #eee;
-        border: 1px solid #ccc;
+        background: #F2E1AC;
+        border: 1px solid #261F07;
         float: right;
         padding: 2.08333333333%; /* 5px / 240px */
         width: 30%; /* 240px / 800px */
@@ -68,12 +68,12 @@
         font-size: 14px;
       }
     
-      .branding {
+      .add {
         clear: both;
       }
     
-      .btn-group button {
-        background-color: #6F01C4; 
+      .buttons button {
+        background-color: #D9AE5F; 
         border: 1px solid white; 
         color: white;
         padding: 10px 24px; 
@@ -83,21 +83,21 @@
         margin-bottom:10px; 
       }
       
-      .btn-group:after {
+      .buttons:after {
         content: "";
         clear: both;
         display: table;
       }
       
-      .btn-group button:not(:last-child) {
+      .buttons button:not(:last-child) {
         border-right: none; 
       }
       
-      .btn-group button:hover {
-        background-color: #654DFB;
+      .buttons button:hover {
+        background-color: #D9B855;
       }
     
-      footer.branding {
+      footer.add {
         border-top: 2px solid #ccc;
         margin-top: 20px;
         padding-top: 20px;

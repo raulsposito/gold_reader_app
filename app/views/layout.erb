@@ -15,7 +15,21 @@
 <h4 style="color:red;"><%= flash[:errors] %></h4>
 <% end %><br>
 
+<div class="buttons">
+    <button onclick="document.location='/readings'">View all Readings Available</button>
+    <% if !logged_in? %>
+        <button onclick="document.location"='/login'">Login</button>
+        <button onclick="document.location"='/signup'">Sign Up</button>
+    <% end %>
+</div>
+
 <%= yield %>
+
+
+<footer class="add">
+<small><strong>Gold Reader App</strong></small>
+</footer>
+</div>
 
 </body>
 </html>

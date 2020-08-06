@@ -5,7 +5,7 @@ class UserController < ApplicationController
     end
 
     post '/users' do 
-        @users = User.new(params)
+        @user = User.new(params)
         if @user.save 
             session[:user_id] = @user.id
             flash[:message] = "Welcome #{@user.name}! You can start reading or find someone who reads to you."
@@ -44,4 +44,4 @@ class UserController < ApplicationController
         flash[:message] = "Thank you #{@user.name}! Reading is Gold."
         redirect '/'
     end
-end
+end 
