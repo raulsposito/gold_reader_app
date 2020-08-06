@@ -1,0 +1,19 @@
+<% if !logged_in? %>
+<p>Please Sign Up or Log In</p><br>
+<% end %>
+
+<% if logged_in? %> 
+    <div class="buttons">
+        <button onclick="document.location='/'">Go to Profile</button>
+        <button onclick="document.location='/logout'">Log Out</button>
+    </div>
+<% end %>
+
+<h2>All Readings</h2>
+
+<% @reading.each do |reading| %>
+    <a href="/users/<%= reading.user.id %>"><strong><%= reading.user.name %></strong></a><br>
+    <strong>Location: </strong><%= reading.name %><br>
+    <strong>Genre: </strong><%= reading.genre %><br>
+    <img src="<%= reading.image_url %>" height="150"><br>
+<% end %>
